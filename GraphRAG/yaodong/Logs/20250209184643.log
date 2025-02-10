@@ -1,0 +1,30 @@
+2025-02-09 18:47:02.477 | INFO     | Core.Chunk.DocChunk:build_chunks:27 - Starting chunk the given documents
+2025-02-09 18:47:02.908 | INFO     | Core.Storage.ChunkKVStorage:_persist:105 - Writing data into /home/yaodong/codes/GNNRAG/GraphRAG/multihop-rag/kg_graph/chunk_storage_chunk_data_idx.pkl and /home/yaodong/codes/GNNRAG/GraphRAG/multihop-rag/kg_graph/chunk_storage_chunk_data_key.pkl
+2025-02-09 18:47:02.937 | INFO     | Core.Chunk.DocChunk:build_chunks:74 - ✅ Finished the chunking stage
+2025-02-09 18:47:02.952 | INFO     | Core.GraphRAG:_update_costs_info:213 - Chunking stage cost: Total prompt token: 0, Total completeion token: 0, Total cost: 0
+2025-02-09 18:47:02.952 | INFO     | Core.GraphRAG:_update_costs_info:215 - Chunking time(s): 0.47
+2025-02-09 18:47:02.952 | INFO     | Core.Graph.BaseGraph:build_graph:41 - Starting build graph for the given documents
+2025-02-09 18:47:02.952 | INFO     | Core.Storage.NetworkXStorage:load_nx_graph:27 - Attempting to load the graph from: /home/yaodong/codes/GNNRAG/GraphRAG/multihop-rag/kg_graph/graph_storage_nx_data.graphml
+2025-02-09 18:47:04.080 | INFO     | Core.Storage.NetworkXStorage:load_nx_graph:31 - Successfully loaded graph from: /home/yaodong/codes/GNNRAG/GraphRAG/multihop-rag/kg_graph/graph_storage_nx_data.graphml with 14767 nodes and 7102 edges
+2025-02-09 18:47:04.080 | INFO     | Core.Graph.BaseGraph:build_graph:50 - ✅ Finished the graph building stage
+2025-02-09 18:47:04.080 | INFO     | Core.GraphRAG:_update_costs_info:213 - Build Graph stage cost: Total prompt token: 0, Total completeion token: 0, Total cost: 0
+2025-02-09 18:47:04.080 | INFO     | Core.GraphRAG:_update_costs_info:215 - Build Graph time(s): 1.13
+2025-02-09 18:47:04.182 | INFO     | Core.Index.BaseIndex:build_index:13 - Starting insert elements of the given graph into vector database
+2025-02-09 18:47:04.182 | INFO     | Core.Index.BaseIndex:build_index:17 - Loading index from the file /home/yaodong/codes/GNNRAG/GraphRAG/multihop-rag/kg_graph/entities_vdb
+2025-02-09 18:47:04.908 | INFO     | Core.Index.BaseIndex:build_index:29 - ✅ Finished starting insert entities of the given graph into vector database
+2025-02-09 18:47:05.050 | INFO     | Core.Community.BaseCommunity:cluster:46 - Starting build community of the given graph
+2025-02-09 18:47:05.061 | INFO     | Core.Storage.JsonKVStorage:load:33 - Load KV /home/yaodong/codes/GNNRAG/GraphRAG/multihop-rag/kg_graph/community_storage_community_node_map.json with 3809 data
+2025-02-09 18:47:05.061 | INFO     | Core.Community.LeidenCommunity:_load_cluster_map:282 - ✅ Successfully loaded community <-> node map.
+2025-02-09 18:47:05.063 | INFO     | Core.Community.BaseCommunity:generate_community_report:26 - Generating community report...
+2025-02-09 18:47:05.091 | INFO     | Core.Storage.JsonKVStorage:load:33 - Load KV /home/yaodong/codes/GNNRAG/GraphRAG/multihop-rag/kg_graph/community_storage_community_report.json with 911 data
+2025-02-09 18:47:05.185 | INFO     | Core.Community.LeidenCommunity:_load_community_report:266 - Successfully loaded community report.
+2025-02-09 18:47:05.185 | INFO     | Core.Community.BaseCommunity:generate_community_report:34 - ✅ [Community Report]  Finished
+2025-02-09 18:47:05.186 | INFO     | Core.Graph.BaseGraph:build_graph:41 - Starting build graph for the given documents
+2025-02-09 18:47:05.186 | INFO     | Core.Storage.NetworkXStorage:load_nx_graph:27 - Attempting to load the graph from: /home/yaodong/codes/GNNRAG/GraphRAG/multihop-rag/kg_graph/graph2nd_storage_nx_data.graphml
+2025-02-09 18:47:05.480 | INFO     | Core.Storage.NetworkXStorage:load_nx_graph:31 - Successfully loaded graph from: /home/yaodong/codes/GNNRAG/GraphRAG/multihop-rag/kg_graph/graph2nd_storage_nx_data.graphml with 2569 nodes and 13578 edges
+2025-02-09 18:47:05.480 | INFO     | Core.Graph.BaseGraph:build_graph:50 - ✅ Finished the graph building stage
+2025-02-09 18:47:05.481 | INFO     | Core.GraphRAG:_update_costs_info:213 - Build 2nd Graph stage cost: Total prompt token: 0, Total completeion token: 0, Total cost: 0
+2025-02-09 18:47:05.481 | INFO     | Core.GraphRAG:_update_costs_info:215 - Build 2nd Graph time(s): 1.40
+2025-02-09 18:47:13.205 | INFO     | Core.GraphRAG:_update_costs_info:213 - Index Building stage cost: Total prompt token: 0, Total completeion token: 0, Total cost: 0
+2025-02-09 18:47:13.206 | INFO     | Core.GraphRAG:_update_costs_info:215 - Index Building time(s): 7.72
+2025-02-09 18:47:13.206 | INFO     | Core.GraphRAG:_build_retriever_context:184 - Building retriever context for the current execution
